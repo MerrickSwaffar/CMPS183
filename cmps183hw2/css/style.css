@@ -1,0 +1,103 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+
+header {
+	height:100px;
+	width:100%;
+	background-color: #DAF2FF;
+	position: fixed;
+	top:0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 50px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    height: 100%;
+    width: 160px;
+    z-index: 1;
+    margin-top: 146px;
+    top:0;
+    left: 0;
+    position: fixed;
+    background-color: #DAF2FF;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    width:100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #34495E;
+    position: fixed;
+    top:0;
+    margin-top: 100px;
+}
+
+li {
+    float: left;
+}
+
+li {
+    border-right: 1px solid #bbb;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover{
+    background-color: black;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 25px;
+    width: 100%;
+    background-color: #34495E;
+    color: white;
+    text-align: center;
+}
+
+.footer a {
+	padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+}
+
+.main {
+    margin-left: 160px; 
+    margin-top: 146px;
+    margin-bottom: 30px;
+    font-size: 18px; 
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<header>
+	<h1>
+		CMPS183: Homework 3
+	</h1>
+</header>
+
+<ul>
+  <li><a href="./index">Home</a></li>
+  <li><a href="./list">To Do List</a></li>
+  <li><a href="./new">To Do Form</a></li>
+</ul>
+
+<div class="sidebar">
+    <h3>Chalenges:</h3>
+    <p>This one is pretty much the same as before, except it actually saves the todo list items.
+        I had some trouble initially just trying to figure out how to use sessionStorage,
+        and that was probably my biggest challenge for this page. The date selector also only
+        accepts future due dates now. 
+    </p>
+    <h3>Resources:</h3>
+    <a href="https://www.w3schools.com">www.w3schools.com</a><br><br>
+    <a href="https://developer.mozilla.org">developer.mozilla.org</a><br><br>
+    <a href="https://bottlepy.org/docs/dev/">bottlepy.org/docs/dev/</a>
+</div>
+
+<div class="main">
+    <h1 style="text-align: center;">To Do Form</h1>
+    <h3>Enter a new to do list item: </h3>
+    <script src="scripts/todoList.js" type="text/javascript"></script>
+    <form id="form">
+      Task Title: <br><input type="text" name="taskName"><br><br>
+      Notes: <br><input type="text" name="notes" size="170"><br><br>
+      Due Date: <br><input type="date" name="date"><br><br>
+      <input type="button" onclick="myFunction(taskName, notes, date)" value="Add Item">
+    </form>
+    <script>
+    function myFunction(name, notes, date) {
+        form = document.getElementById("form");
+        name = form.elements[0].value;
+        notes = form.elements[1].value;
+        date = form.elements[2].value;
+        if (date < getDate()){
+            alert("Invalid Due Date"); 
+            return;
+        }
+        addItem(name, notes, date);
+        form.reset();
+        window.location.href = "./list";
+    }
+    </script>
+</div>
+
+<div class="footer">
+  <a href="#about">About Us</a>
+  <a href="#contact">Contact</a>
+  <a href="#privacy">Privacy</a>
+  <a href="#credits">Credits</a>
+</div>
+     
+</body>
+</html> 
